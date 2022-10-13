@@ -14,6 +14,12 @@
   --btn-color-accent: #188ce8;
   --line-header-color: #ececec;
   --border-card-color: #eeeeee;
+
+  --shadow-button-color: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --shadow-card-color: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --shadow-filter-color: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* глобальні стилі */
@@ -34,6 +40,8 @@ body {
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .btn {
@@ -46,11 +54,18 @@ body {
   color: var(--text-color-secondary);
   background-color: var(--bgn-color-light);
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
 
 .btn:hover,
 .btn:focus {
+  color: var(--color-main);
   background-color: var(--color-accent);
+  box-shadow: var(--shadow-filter-color);
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .visually-hidden {
@@ -66,7 +81,37 @@ body {
   margin: -1px;
 }
 
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid purple;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
 /* хедер */
+.page-header {
+  border-bottom: 1px solid var(--line-header-color);
+}
+
+.container-header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -105,14 +150,23 @@ body {
   background-color: var(--bgn-color-dark);
 }
 
+.container-hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .main-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  text-align: center;
   text-transform: uppercase;
   color: var(--color-main);
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .main-btn {
@@ -121,27 +175,47 @@ body {
   letter-spacing: 0.06em;
   color: var(--color-main);
   background-color: var(--color-accent);
+  padding: 10px 32px;
 }
 
 .main-btn:hover,
 .main-btn:focus {
   background-color: var(--btn-color-accent);
+  box-shadow: var(--shadow-button-color);
+  padding: 10px 32px;
 }
 
 /* наші переваги */
+.container-benefit {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  outline: 2px solid purple;
+}
+
+.item-benefit {
+  width: 270px;
+}
+
 .subtitle {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--text-color-secondary);
+  margin-bottom: 10px;
 }
 
 /* чим ми займаємося */
+.container-work {
+  padding-bottom: 94px;
+}
+
 .title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--text-color-secondary);
+  margin-bottom: 50px;
 }
 
 /* наша команда */
@@ -149,40 +223,80 @@ body {
   background-color: var(--bgn-color-light);
 }
 
+.container-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .team-card {
+  width: 270px;
+  box-shadow: var(--shadow-card-color);
+  border-radius: 0px 0px 4px 4px;
   background-color: var(--color-main);
+  padding-bottom: 30px;
 }
 
 .subtitle-team {
   font-weight: 500;
   color: var(--text-color-secondary);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .subtitle-team,
 .desc-team {
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.19;
   text-align: center;
 }
 
 /* футер */
-.section-footer > .logo,
+.container-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-footer .logo,
 .address-footer {
   color: var(--color-main);
+
+  outline: 2px solid purple;
 }
 
 .address {
   font-style: inherit;
 }
 
+.address-footer {
+  display: inline-block;
+  margin-top: 20px;
+}
+
 .contact-footer {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-color-contact);
+  display: inline-block;
+  margin-top: 9px;
+
+  outline: 2px solid purple;
+}
+
+.footer-list li {
+  line-height: 1;
 }
 
 /*портфоліо */
-.filter-btn {
-  color: var(--color-main);
-  background-color: var(--color-accent);
+.container-filter {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+.project-card {
+  width: 370px;
+  background-color: var(--color-main);
+  border-right: 1px solid var(--border-card-color);
+  border-bottom: 1px solid var(--border-card-color);
+  border-left: 1px solid var(--border-card-color);
+  padding: 20px 24px;
 }
 
 .title-portfolio {
@@ -190,6 +304,7 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-color-secondary);
+  margin-bottom: 4px;
 }
 
 .desc-portfolio {
