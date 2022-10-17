@@ -65,8 +65,6 @@ body {
   color: var(--color-main);
   background-color: var(--color-accent);
   box-shadow: var(--shadow-filter-color);
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 .visually-hidden {
@@ -160,8 +158,6 @@ img {
 .page-link:focus,
 .contact:hover,
 .contact:focus,
-.address-footer:hover,
-.address-footer:focus,
 .contact-footer:hover,
 .contact-footer:focus {
   color: var(--color-accent);
@@ -257,13 +253,16 @@ img {
   box-shadow: var(--shadow-card-color);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--color-main);
+}
+
+.box-team-desc {
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .subtitle-team {
   font-weight: 500;
   color: var(--text-color-secondary);
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 
